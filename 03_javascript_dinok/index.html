@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dínók</title>
+    <link rel="stylesheet" href="stilus.css">
+</head>
+<body>
+    <h1>Dinoszauruszok</h1>
+    <select name="" id="dinovalto" onchange="valtoztat()" >
+        <option value="" selected >Velociraptor</option>
+        <option value="">Theropoda</option>
+        <option value="">T-Rex</option>
+        <option value="">Allosaurus</option>
+        <option value="">Spinosaurus</option>
+    </select>
+<h2 id="dinonev">Velociraptor</h2>
+
+<script>
+    function valtoztat(){
+        var dinovarians = document.getElementById("dinovalto").value
+        document.getElementById("dinonev").innerHTML="";
+    }
+
+</script>
+
+</body>
+</html>

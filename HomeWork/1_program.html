@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téglatest térfogata és felszíne</title>
+    <link rel="stylesheet" href="stilus1.css">
+</head>
+<body>
+<div class="adatbekeresek">
+Add meg az a oldalt:
+<input type="text" id="szam1">    
+<br>
+Add meg a b oldalt:
+<input type="text" id="szam2">
+<br>
+Add meg a c oldalt:
+<input type="text" id="szam3">
+<br>
+<button  onclick="terfogatfelszin()"   >Térfogat és felszín kiszámítása</button>
+<br>
+<br>
+<br>
+<span id="terfogat"></span>
+<span id="felszín"></span>
+</div>
+
+<script>
+   function terfogatfelszin(){
+       var szam1=document.getElementById("szam1").value;
+       var szam2=document.getElementById("szam2").value;
+       var szam3 = document.getElementById("szam3").value;
+       var terfogat=parseInt(szam1)*parseInt(szam2)*parseInt(szam3);
+       var felszin = 2*(parseInt(szam1)*parseInt(szam2)+parseInt(szam1)*parseInt(szam3)+parseInt(szam2)*parseInt(szam3));
+       document.getElementById("terfogat").innerHTML= " Térfogat: "+terfogat + " cm3";
+       document.getElementById("felszin").innerHTML= " Felszín: " +felszin + " cm2";
+       
+   } 
+</script>
+</body>
+</html>

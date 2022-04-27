@@ -8,50 +8,38 @@ fetch("https://raw.githubusercontent.com/abstractlyZach/write_you_a_love_song/ma
 function megjelenit(adatok){
     console.log(adatok)
     tomb=adatok;
+    
     var sz='';
-    for (var elem of adatok){
+    for (var elem of adatok)
+    {
         sz+='<div class="col-sm-3">'
-        
         sz+='<p>'+elem.title+'</p>'
         sz+='</div>'
-        sz+='</div>'
     }
-    document.querySelector("#eminemdiv").innerHTML=sz
+    document.getElementById("eminemdiv").innerHTML=sz;
 }
-
-//dobozon kattintásra modálisban hozza ki csak azt a Nobel-díjast(év, típus)(név)
-
 function kattintas(sorszam){
     var sz='';
     //sz+=sorszam;
-    sz+=adatok.artist
+    sz+=adatok[sorszam].artist+" "+adatok[sorszam].artist
     document.getElementById("modalisfej").innerHTML=sz
 
     var sz2='';
-    for (var elem of adatok){
+    for (var elem of adatok.title){
         sz2+='<p>'
-        sz2+=elem.artist
+        sz2+=elem.title
         sz2+='</p>'
 
-        if (typeof elem.artist==='undefined')
+        if (typeof elem.title==='undefined')
         {
         }
         else{
         sz2+='<p>'
-        sz2+=elem.artist
+        sz2+=elem.title
         sz2+='</p>'
         }
-        sz2+='<p>'
-        sz2+=elem.artist
-        sz2+='</p>'
+        
         
     }
     document.getElementById("modalistorzs").innerHTML=sz2;
-    
-
-
 }
-
-
-
-
